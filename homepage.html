@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎬 CouchCritics</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/685/685655.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #f7f6f3;
+      color: #2d2d2d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    header p {
+      color: #7a7a7a;
+      font-style: italic;
+      font-size: 1em;
+      margin-top: 4px;
+    }
+
+    .movie-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      max-width: 1100px;
+    }
+
+    .movie-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      color: inherit;
+      width: 480px;
+      height: 180px;
+      padding: 18px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      overflow: hidden;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .movie-card img {
+      height: 100%;
+      width: 45%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .movie-info {
+      flex: 1;
+    }
+
+    .movie-info h3 {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .movie-info p {
+      font-size: 0.95em;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .credit {
+      font-size: 0.85em;
+      font-weight: 500;
+    }
+
+    .willoughbys {
+      background: linear-gradient(135deg, #fcd9d4, #f8c7b9);
+    }
+
+    .menu {
+      background: linear-gradient(135deg, #f7e0b2, #f5d097);
+    }
+
+    .everything {
+      background: linear-gradient(135deg, #d4d7f8, #bfc4f5);
+    }
+
+    .horrors {
+      background: linear-gradient(135deg, #c8e8d0, #b3ddbd);
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #7b7b7b;
+      font-size: 0.9em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎬 CouchCritics 🍿</h1>
+    <p>"Chill watches, heated reviews"</p>
+  </header>
+
+  <section class="movie-grid">
+    <a href="public/couchcriticspml.html" class="movie-card willoughbys">
+      <img src="https://cdn.vox-cdn.com/thumbor/AY4_lZI0YsclpMHlKN9tIVoPZqE=/0x0:2580x1080/1920x0/filters:focal(0x0:2580x1080):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19917882/The_Willoughbys_00_11_20_09.png" alt="The Willoughbys">
+      <div class="movie-info">
+        <h3>The Willoughbys</h3>
+        <p>Comedy · Adventure · Family</p>
+        <div class="credit">Reviewed by <strong>Phipa Libunao</strong></div>
+      </div>
+    </a>
+
+    <a href="public/menu.html" class="movie-card menu">
+      <img src="https://www.belloflostsouls.net/wp-content/uploads/2022/09/the-menu-movie-still.jpg" alt="The Menu">
+      <div class="movie-info">
+        <h3>The Menu</h3>
+        <p>Thriller · Satire · Drama</p>
+        <div class="credit">Reviewed by <strong>Tomas Macalintal</strong></div>
+      </div>
+    </a>
+
+    <a href="public/everything.html" class="movie-card everything">
+      <img src="https://m.media-amazon.com/images/M/MV5BZjM0MDFmZDctNmFjMi00MzM2LWJlYmItMzk2MTJlZDI1ZGRkXkEyXkFqcGdeQXZ3ZXNsZXk@._V1_.jpg" alt="Everything Everywhere All at Once">
+      <div class="movie-info">
+        <h3>Everything Everywhere All at Once</h3>
+        <p>Action · Sci-Fi · Drama</p>
+        <div class="credit">Reviewed by <strong>Uan Doctolero</strong></div>
+      </div>
+    </a>
+
+    <a href="public/horrors.html" class="movie-card horrors">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.n5lQfw6DrPCLSBjGD0c8wgHaEK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Little Shop of Horrors">
+      <div class="movie-info">
+        <h3>Little Shop of Horrors</h3>
+        <p>Musical · Comedy · Horror</p>
+        <div class="credit">Reviewed by <strong>Rey Lampa</strong></div>
+      </div>
+    </a>
+  </section>
+
+  <footer>© 2025 CouchCritics — Libunao, Macalintal, Doctolero, Lampa</footer>
+</body>
+</html>
