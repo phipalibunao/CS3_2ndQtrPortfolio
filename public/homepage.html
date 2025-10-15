@@ -7,11 +7,7 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/685/685655.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Inter", sans-serif;
       background-color: #f7f6f3;
@@ -19,22 +15,40 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px;
+      padding: 0 20px 40px;
     }
-    header {
-      text-align: center;
-      margin-bottom: 50px;
+    nav.navbar {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    header h1 {
-      font-size: 2.2em;
-      font-weight: 700;
+    nav.navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 12px 0;
+      gap: 30px;
+      margin: 0;
     }
-    header p {
-      color: #7a7a7a;
-      font-style: italic;
-      font-size: 1em;
-      margin-top: 4px;
+    nav.navbar ul li a {
+      text-decoration: none;
+      color: #2d2d2d;
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 6px 12px;
+      border-radius: 12px;
+      transition: background 0.3s, color 0.3s;
     }
+    nav.navbar ul li a:hover {
+      background: #2d2d2d;
+      color: #fff;
+    }
+    header { text-align: center; margin: 50px 0; }
+    header h1 { font-size: 2.2em; font-weight: 700; }
+    header p { color: #7a7a7a; font-style: italic; font-size: 1em; margin-top: 4px; }
     .movie-grid {
       display: flex;
       justify-content: center;
@@ -66,44 +80,29 @@
       object-fit: cover;
       border-radius: 12px;
     }
-    .movie-info {
-      flex: 1;
-    }
-    .movie-info h3 {
-      font-size: 1.2em;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .movie-info p {
-      font-size: 0.95em;
-      color: #444;
-      margin-bottom: 10px;
-    }
-    .credit {
-      font-size: 0.85em;
-      font-weight: 500;
-    }
-    .willoughbys {
-      background: linear-gradient(135deg, #fcd9d4, #f8c7b9);
-    }
-    .menu {
-      background: linear-gradient(135deg, #f7e0b2, #f5d097);
-    }
-    .everything {
-      background: linear-gradient(135deg, #d4d7f8, #bfc4f5);
-    }
-    .horrors {
-      background: linear-gradient(135deg, #c8e8d0, #b3ddbd);
-    }
-    footer {
-      margin-top: 60px;
-      color: #7b7b7b;
-      font-size: 0.9em;
-      text-align: center;
-    }
+    .movie-info { flex: 1; }
+    .movie-info h3 { font-size: 1.2em; font-weight: 600; margin-bottom: 6px; }
+    .movie-info p { font-size: 0.95em; color: #444; margin-bottom: 10px; }
+    .credit { font-size: 0.85em; font-weight: 500; }
+    .willoughbys { background: linear-gradient(135deg, #fcd9d4, #f8c7b9); }
+    .menu { background: linear-gradient(135deg, #f7e0b2, #f5d097); }
+    .everything { background: linear-gradient(135deg, #d4d7f8, #bfc4f5); }
+    .horrors { background: linear-gradient(135deg, #c8e8d0, #b3ddbd); }
+    footer { margin-top: 60px; color: #7b7b7b; font-size: 0.9em; text-align: center; }
   </style>
 </head>
 <body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage.html">Homepage</a></li>
+      <li><a href="menu.html">Tomas</a></li>
+      <li><a href="couchcriticspml.html">Phipa</a></li>
+      <li><a href="https://uandoc.github.io/CS3_2ndQtrPortfolio/public/2Q1GPotassiumDoctolero.html" target="_blank">Uan</a></li>
+      <li><a href="horrors.html">Rey</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>🎬 CouchCritics 🍿</h1>
     <p>"Chill watches, heated reviews"</p>

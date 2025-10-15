@@ -87,142 +87,33 @@
       animation: taglineFade 2s ease-out 3s forwards;
     }
     @keyframes taglineFade { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-    .floating-title {
-      position: absolute;
-      font-size: 2.2em;
-      opacity: 0.9;
-      animation: float 6s ease-in-out infinite alternate;
-      text-shadow: 2px 2px 4px rgba(100, 50, 20, 0.4);
-    }
-    @keyframes float {
-      0% { transform: translate(0,0) rotate(0deg); }
-      50% { transform: translate(12px,-15px) rotate(10deg); }
-      100% { transform: translate(-10px,10px) rotate(-8deg); }
-    }
+    .floating-title { position: absolute; font-size: 2.2em; opacity: 0.9; animation: float 6s ease-in-out infinite alternate; text-shadow: 2px 2px 4px rgba(100, 50, 20, 0.4); }
+    @keyframes float { 0% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(12px,-15px) rotate(10deg); } 100% { transform: translate(-10px,10px) rotate(-8deg); } }
     .title-yarn { top: 70px; left: 18%; animation-delay: 0s; }
     .title-lollipop { top: 130px; right: 25%; animation-delay: 1s; }
     .title-book { top: 90px; right: 10%; animation-delay: 2s; }
     .title-hat { top: 170px; left: 10%; animation-delay: 3s; }
     .title-sparkle { top: 200px; right: 15%; animation-delay: 4s; }
     .title-candy { top: 230px; left: 30%; animation-delay: 5s; }
-    .container {
-      max-width: 950px;
-      background: rgba(255, 250, 240, 0.96);
-      margin: 70px auto;
-      border-radius: 40px;
-      box-shadow: 0 10px 45px rgba(90, 30, 10, 0.45);
-      padding: 45px;
-      border: 6px double #f6a36c;
-      background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
-    }
-    .poster {
-      width: 100%;
-      border-radius: 25px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    }
-    h2 {
-      font-family: 'Cormorant Garamond', serif;
-      color: #b33a1d;
-      font-size: 2.4em;
-      margin-top: 40px;
-      border-bottom: 3px dashed #f3a86f;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    p {
-      font-size: 1.25em;
-      line-height: 1.8em;
-      margin-top: 10px;
-      color: #4a2a13;
-    }
-    .quote {
-      font-size: 1.5em;
-      font-style: italic;
-      background: #ffe6da;
-      border-left: 10px solid #d25733;
-      padding: 25px;
-      border-radius: 20px;
-      margin: 35px 0;
-      color: #7a2f1b;
-      box-shadow: 4px 4px 14px rgba(80, 30, 10, 0.2);
-      background-image: url('https://www.transparenttextures.com/patterns/woven-light.png');
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 25px;
-      font-size: 1.15em;
-      border-radius: 20px;
-      overflow: hidden;
-      background-image: url('https://www.transparenttextures.com/patterns/symphony.png');
-    }
-    th {
-      background: #ffd1b5;
-      font-family: 'Cormorant Garamond', serif;
-      color: #5a1a0c;
-      font-size: 1.2em;
-      border: 2px solid #f1ad83;
-      padding: 14px;
-    }
-    td {
-      background: #fffaf4;
-      color: #4a2812;
-      border: 2px solid #f5c9a3;
-      padding: 14px;
-    }
-    .char-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 20px;
-      object-fit: cover;
-      box-shadow: 3px 4px 12px rgba(0,0,0,0.25);
-    }
-    .movie-review {
-      background: #ffe8d7;
-      border-radius: 25px;
-      padding: 30px;
-      margin: 40px 0;
-      font-size: 1.3em;
-      color: #6a2f1f;
-      box-shadow: 3px 4px 20px rgba(80, 30, 10, 0.25);
-      border-left: 8px solid #d85c2c;
-      background-image: url('https://www.transparenttextures.com/patterns/yarn.png');
-    }
-    .willoughby-gif {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 40px 0;
-    }
-    .willoughby-gif img {
-      border-radius: 20px;
-      max-width: 100%;
-      height: auto;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .video {
-      margin-top: 25px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-    }
-    footer {
-      text-align: center;
-      color: #ffd8cc;
-      margin-top: 60px;
-      padding: 30px 0 80px;
-      font-size: 1.1em;
-      text-shadow: 2px 2px 6px rgba(60,30,10,0.6);
-      background: linear-gradient(to top, rgba(100,30,10,0.8), transparent);
-    }
+    .container { max-width: 950px; background: rgba(255, 250, 240, 0.96); margin: 70px auto; border-radius: 40px; box-shadow: 0 10px 45px rgba(90, 30, 10, 0.45); padding: 45px; border: 6px double #f6a36c; background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png'); }
+    .poster { width: 100%; border-radius: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); }
+    h2 { font-family: 'Cormorant Garamond', serif; color: #b33a1d; font-size: 2.4em; margin-top: 40px; border-bottom: 3px dashed #f3a86f; display: inline-block; padding-bottom: 5px; }
+    p { font-size: 1.25em; line-height: 1.8em; margin-top: 10px; color: #4a2a13; }
+    .quote { font-size: 1.5em; font-style: italic; background: #ffe6da; border-left: 10px solid #d25733; padding: 25px; border-radius: 20px; margin: 35px 0; color: #7a2f1b; box-shadow: 4px 4px 14px rgba(80, 30, 10, 0.2); background-image: url('https://www.transparenttextures.com/patterns/woven-light.png'); }
+    table { width: 100%; border-collapse: collapse; margin-top: 25px; font-size: 1.15em; border-radius: 20px; overflow: hidden; background-image: url('https://www.transparenttextures.com/patterns/symphony.png'); }
+    th { background: #ffd1b5; font-family: 'Cormorant Garamond', serif; color: #5a1a0c; font-size: 1.2em; border: 2px solid #f1ad83; padding: 14px; }
+    td { background: #fffaf4; color: #4a2812; border: 2px solid #f5c9a3; padding: 14px; }
+    .char-img { width: 120px; height: 120px; border-radius: 20px; object-fit: cover; box-shadow: 3px 4px 12px rgba(0,0,0,0.25); }
+    .movie-review { background: #ffe8d7; border-radius: 25px; padding: 30px; margin: 40px 0; font-size: 1.3em; color: #6a2f1f; box-shadow: 3px 4px 20px rgba(80, 30, 10, 0.25); border-left: 8px solid #d85c2c; background-image: url('https://www.transparenttextures.com/patterns/yarn.png'); }
+    .willoughby-gif { display: flex; justify-content: center; align-items: center; margin: 40px 0; }
+    .willoughby-gif img { border-radius: 20px; max-width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    .video { margin-top: 25px; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
+    iframe { width: 100%; height: 400px; border: none; }
+    footer { text-align: center; color: #ffd8cc; margin-top: 60px; padding: 30px 0 80px; font-size: 1.1em; text-shadow: 2px 2px 6px rgba(60,30,10,0.6); background: linear-gradient(to top, rgba(100,30,10,0.8), transparent); }
   </style>
 </head>
 <body>
+
   <nav class="navbar">
     <ul>
       <li><a href="homepage.html">Homepage</a></li>
@@ -236,7 +127,7 @@
     <div class="floating-title title-yarn">🧶</div>
     <div class="floating-title title-lollipop">🍭</div>
     <div class="floating-title title-book">📖</div>
-    <div class="floating-title title-fall">🍂</div>
+    <div class="floating-title title-hat">🎩</div>
     <div class="floating-title title-candy">🍬</div>
     <div class="floating-title title-sparkle">✨</div>
     <div class="title-container">
@@ -253,33 +144,27 @@
       <tr><th>Image</th><th>Character</th><th>Role</th><th>Personality</th></tr>
       <tr>
         <td><img src="https://tse3.mm.bing.net/th/id/OIP.8e3R5pvef3HisoAuVDpgFgAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="char-img" alt="Tim Willoughby"></td>
-        <td>Tim Willoughby</td><td>Oldest Sibling</td>
-        <td>Tim is portrayed as the typical older brother, bossy yet unsure inside.</td>
+        <td>Tim Willoughby</td><td>Oldest Sibling</td><td>Tim is portrayed as the typical older brother, bossy yet unsure inside.</td>
       </tr>
       <tr>
         <td><img src="https://www.wrmf.com/wp-content/uploads/2020/03/M_AlessiaCaraWilloughbys_032320.jpg" class="char-img" alt="Jane Willoughby"></td>
-        <td>Jane Willoughby</td><td>Middle Sibling</td>
-        <td>Cheerful, creative, and always hopeful for her family's future.</td>
+        <td>Jane Willoughby</td><td>Middle Sibling</td><td>Cheerful, creative, and always hopeful for her family's future.</td>
       </tr>
       <tr>
         <td><img src="https://cdna.artstation.com/p/assets/images/images/029/231/316/large/nick-duarte-twb-08.jpg?1596863756" class="char-img" alt="Barnaby Twins"></td>
-        <td>Barnaby Twins</td><td>Youngest Brothers</td>
-        <td>Clever and curious, always inventing odd contraptions together.</td>
+        <td>Barnaby Twins</td><td>Youngest Brothers</td><td>Clever and curious, always inventing odd contraptions together.</td>
       </tr>
       <tr>
         <td><img src="https://artworks.thetvdb.com/banners/movies/134162/backgrounds/5e78cd7a68aaa.jpg" class="char-img" alt="Nanny"></td>
-        <td>Nanny</td><td>Guardian Figure</td>
-        <td>Warm-hearted and caring, the real parent the children needed.</td>
+        <td>Nanny</td><td>Guardian Figure</td><td>Warm-hearted and caring, the real parent the children needed.</td>
       </tr>
       <tr>
         <td><img src="https://tse3.mm.bing.net/th/id/OIP.TvhJd3gakbyl1UQycYpfLwAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="char-img" alt="Commander Melanoff"></td>
-        <td>Commander Melanoff</td><td>Chocolate Factory Owner</td>
-        <td>Kind, quirky, and shows the children the meaning of true family love.</td>
+        <td>Commander Melanoff</td><td>Chocolate Factory Owner</td><td>Kind, quirky, and shows the children the meaning of true family love.</td>
       </tr>
       <tr>
         <td><img src="https://wherever-i-look.com/wp-content/uploads/2020/04/Mother-Jane-Krakowski-and-Father-Martin-Short-The-Willoughbys-2020-Netflix-scaled.jpg" class="char-img" alt="Mr. and Mrs. Willoughby"></td>
-        <td>Mr. & Mrs. Willoughby</td><td>Parents</td>
-        <td>Self-centered and neglectful, the opposite of a loving family.</td>
+        <td>Mr. & Mrs. Willoughby</td><td>Parents</td><td>Self-centered and neglectful, the opposite of a loving family.</td>
       </tr>
     </table>
 
