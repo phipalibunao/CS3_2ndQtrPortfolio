@@ -2,199 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎬 CouchCritics</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/685/685655.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Phipa Libunao's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f6f5f2;
-      color: #2d2d2d;
-      padding: 40px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: #6b6b6b;
-      font-size: 1.1em;
-      font-style: italic;
-    }
-
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: #ddd;
-      margin: 25px 0 50px;
-    }
-
-    .movie-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 35px;
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    .movie-card {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
       display: flex;
-      border-radius: 18px;
+      height: 100vh;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-decoration: none;
-      color: inherit;
     }
 
-    .movie-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
-    }
-
-    .movie-card img {
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .movie-info {
-      padding: 20px;
-      flex: 1;
+    .sidebar {
+      width: 260px;
+      background-color: #d9c4ff;
+      padding: 40px 25px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
+      border-right: 3px solid #c1a7ff;
+      z-index: 10;
     }
 
-    .movie-info h3 {
-      font-size: 1.3em;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .movie-info p {
-      font-size: 0.95em;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    .credit {
-      font-size: 0.9em;
-      color: #fff;
-      opacity: 0.85;
-    }
-
-    footer {
+    .sidebar h2 {
+      font-size: 20px;
+      color: #4c2e9a;
+      margin-bottom: 20px;
       text-align: center;
-      margin-top: 60px;
-      color: #7b7b7b;
-      font-size: 0.9em;
     }
 
-    .willoughbys {
-      background: linear-gradient(135deg, #f9d0c4, #f3b9a8);
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .menu {
-      background: linear-gradient(135deg, #f6e3b4, #e9c36c);
+    .sidebar nav a {
+      display: block;
+      background-color: #a78bfa;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
-    .everything {
-      background: linear-gradient(135deg, #d1d6f9, #aeb4f1);
+    .sidebar nav a:hover {
+      background-color: #7c3aed;
+      transform: scale(1.05);
     }
 
-    .horrors {
-      background: linear-gradient(135deg, #c5edd2, #8ed3a5);
+    .main {
+      flex: 1;
+      position: relative;
+      background: url('https://images3.alphacoders.com/136/1360651.jpeg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
     }
 
-    .decor {
-      position: fixed;
-      border-radius: 50%;
-      opacity: 0.15;
-      z-index: -1;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1;
     }
 
-    .decor.one {
-      background: #d3d7f5;
-      width: 180px;
-      height: 180px;
-      top: 80px;
-      left: -60px;
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
     }
 
-    .decor.two {
-      background: #f5d3c8;
-      width: 220px;
-      height: 220px;
-      bottom: 60px;
-      right: -80px;
+    .content h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
     }
+
+    .content p {
+      font-size: 18px;
+      max-width: 500px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 30px;
+      animation: float 10s infinite linear;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) translateX(0) rotate(0deg); }
+      100% { transform: translateY(-10vh) translateX(50px) rotate(360deg); }
+    }
+
+    .emoji:nth-child(1) { left: 5%; animation-duration: 6s; }
+    .emoji:nth-child(2) { left: 20%; animation-duration: 8s; }
+    .emoji:nth-child(3) { left: 40%; animation-duration: 10s; }
+    .emoji:nth-child(4) { left: 60%; animation-duration: 7s; }
+    .emoji:nth-child(5) { left: 80%; animation-duration: 9s; }
   </style>
 </head>
 <body>
-  <div class="decor one"></div>
-  <div class="decor two"></div>
+  <div class="sidebar">
+    <h2>🗂️ Tasks</h2>
+    <nav>
+      <ul>
+        <li><a href="./public/homepage.html">📁 1st Graded Exercise</a></li>
+        <li><a href="#">📁 2nd Graded Exercise</a></li>
+        <li><a href="#">📁 3rd Graded Exercise</a></li>
+      </ul>
+    </nav>
+  </div>
 
-  <header>
-    <h1>🎞️ CouchCritics 🍿</h1>
-    <p>"Chill watches, heated reviews"</p>
-  </header>
+  <div class="main">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>2nd Quarter Portfolio</h1>
+      <p>Hi! I'm <strong>Phipa Libunao</strong> and welcome to my Second Quarter Portfolio!</p>
+    </div>
 
-  <div class="divider"></div>
-
-  <section class="movie-grid">
-    <a href="public/couchcriticspml.html" class="movie-card willoughbys">
-      <img src="https://cdn.vox-cdn.com/thumbor/AY4_lZI0YsclpMHlKN9tIVoPZqE=/0x0:2580x1080/1920x0/filters:focal(0x0:2580x1080):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19917882/The_Willoughbys_00_11_20_09.png" alt="The Willoughbys">
-      <div class="movie-info">
-        <h3>The Willoughbys</h3>
-        <p>Comedy · Adventure · Family</p>
-        <div class="credit">Reviewed by Phipa Libunao</div>
-      </div>
-    </a>
-
-    <a href="#" class="movie-card menu">
-      <img src="https://www.belloflostsouls.net/wp-content/uploads/2022/09/the-menu-movie-still.jpg" alt="The Menu">
-      <div class="movie-info">
-        <h3>The Menu</h3>
-        <p>Thriller · Satire · Drama</p>
-        <div class="credit">Reviewed by Tomas Macalintal</div>
-      </div>
-    </a>
-
-    <a href="#" class="movie-card everything">
-      <img src="https://m.media-amazon.com/images/M/MV5BZjM0MDFmZDctNmFjMi00MzM2LWJlYmItMzk2MTJlZDI1ZGRkXkEyXkFqcGdeQXZ3ZXNsZXk@._V1_.jpg" alt="Everything Everywhere All at Once">
-      <div class="movie-info">
-        <h3>Everything Everywhere All at Once</h3>
-        <p>Action · Sci-Fi · Drama</p>
-        <div class="credit">Reviewed by Uan Doctolero</div>
-      </div>
-    </a>
-
-    <a href="#" class="movie-card horrors">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.n5lQfw6DrPCLSBjGD0c8wgHaEK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Little Shop of Horrors">
-      <div class="movie-info">
-        <h3>Little Shop of Horrors</h3>
-        <p>Musical · Comedy · Horror</p>
-        <div class="credit">Reviewed by Rey Lampa</div>
-      </div>
-    </a>
-  </section>
-
-  <footer>© 2025 CouchCritics — LIBUNAO, MACALINTAL, DOCTOLERO, LAMPA</footer>
+    <div class="emoji">🎬</div>
+    <div class="emoji">📚</div>
+    <div class="emoji">🔖</div>
+    <div class="emoji">☕</div>
+    <div class="emoji">🍂</div>
+  </div>
 </body>
 </html>
