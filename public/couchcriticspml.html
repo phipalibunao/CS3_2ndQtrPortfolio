@@ -19,6 +19,35 @@
       color: #5a2414;
       overflow-x: hidden;
     }
+    nav.navbar {
+      width: 100%;
+      background: rgba(255, 230, 214, 0.95);
+      box-shadow: 0 4px 15px rgba(90,30,10,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav.navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 12px 0;
+      gap: 30px;
+      margin: 0;
+    }
+    nav.navbar ul li a {
+      text-decoration: none;
+      color: #c23a24;
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 6px 12px;
+      border-radius: 12px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav.navbar ul li a:hover {
+      background: #c23a24;
+      color: #fff;
+    }
     header {
       text-align: center;
       padding: 110px 20px 60px;
@@ -194,6 +223,15 @@
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage.html">Homepage</a></li>
+      <li><a href="menu.html">Tomas</a></li>
+      <li><a href="https://uandoc.github.io/CS3_2ndQtrPortfolio/public/2Q1GPotassiumDoctolero.html" target="_blank">Uan</a></li>
+      <li><a href="horrors.html">Rey</a></li>
+    </ul>
+  </nav>
+
   <header>
     <div class="floating-title title-yarn">🧶</div>
     <div class="floating-title title-lollipop">🍭</div>
