@@ -1,148 +1,106 @@
-/* === GLOBAL RESET === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* === BODY === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Quicksand', sans-serif;
-  color: white;
-  background-image: url('https://cdn.wallpapersafari.com/56/20/3JSYsz.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.6);
-  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  background-color: #f7f6f3;
+  color: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 60px;
 }
 
-/* === NAVBAR === */
-nav {
-  background-color: rgba(0, 0, 0, 0.75);
-  text-align: center;
-  padding: 1rem 0;
+nav.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-
-nav ul {
+nav.navbar ul {
+  display: flex;
+  justify-content: center;
   list-style: none;
+  padding: 12px 0;
+  gap: 30px;
+  margin: 0;
 }
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #ffc107;
+nav.navbar ul li a {
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  color: #2d2d2d;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transition: background 0.3s, color 0.3s;
 }
-
-nav ul li a:hover {
+nav.navbar ul li a:hover {
+  background: #2d2d2d;
   color: #fff;
-  text-shadow: 0 0 10px #ffc107;
 }
 
-/* === HEADER === */
-header {
-  text-align: center;
-  padding: 100px 20px 60px;
-  position: relative;
+header { text-align: center; margin: 50px 0; }
+header h1 { font-size: 2.2em; font-weight: 700; }
+header p { color: #7a7a7a; font-style: italic; font-size: 1em; margin-top: 4px; }
+
+.movie-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 1100px;
 }
-
-header h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4rem;
-  letter-spacing: 2px;
-  color: #fff;
-  text-shadow: 2px 2px 15px #ffb300;
-  animation: glow 3s ease-in-out infinite alternate;
+.movie-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  width: 480px;
+  height: 180px;
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
 }
-
-@keyframes glow {
-  from {
-    text-shadow: 2px 2px 15px #ffb300;
-  }
-  to {
-    text-shadow: 2px 2px 30px #ff9100;
-  }
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
-
-header p {
-  font-size: 1.4rem;
-  margin-top: 10px;
-  color: #ffd54f;
+.movie-card img {
+  height: 100%;
+  width: 45%;
+  object-fit: cover;
+  border-radius: 12px;
 }
+.movie-info { flex: 1; }
+.movie-info h3 { font-size: 1.2em; font-weight: 600; margin-bottom: 6px; }
+.movie-info p { font-size: 0.95em; color: #444; margin-bottom: 10px; }
+.credit { font-size: 0.85em; font-weight: 500; }
 
-/* === FLOATING TITLE ICONS === */
-.floating-title {
-  position: absolute;
-  font-size: 2.5rem;
-  animation: float 4s ease-in-out infinite;
-  opacity: 0.9;
-}
+.willoughbys { background: linear-gradient(135deg, #fcd9d4, #f8c7b9); }
+.menu { background: linear-gradient(135deg, #f7e0b2, #f5d097); }
+.everything { background: linear-gradient(135deg, #d4d7f8, #bfc4f5); }
+.horrors { background: linear-gradient(135deg, #c8e8d0, #b3ddbd); }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.title-yarn { top: 20px; left: 30px; }
-.title-book { top: 20px; right: 30px; }
-.title-sparkle { bottom: 30px; left: 50%; transform: translateX(-50%); }
-
-/* === CONTAINER === */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.65);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
-}
-
-/* === MOVIE REVIEW === */
-.movie-review {
-  margin-top: 25px;
-}
-
-.movie-review img {
-  float: left;
-  margin-right: 20px;
-  width: 220px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.movie-review p {
-  text-align: justify;
-  margin-bottom: 15px;
-}
-
-/* === FOOTER === */
 footer {
+  margin-top: 80px;
   text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  font-size: 0.9rem;
-  color: #ffca28;
-  margin-top: 50px;
+  color: #7b7b7b;
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+footer a {
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #555;
 }
 
-/* === LINKS === */
-a {
-  color: #ffd54f;
-}
-
-a:hover {
-  color: #fff;
-  text-decoration: underline;
+.footer-section {
+  margin-bottom: 15px;
 }
