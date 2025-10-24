@@ -19,7 +19,6 @@
       background-position: center;
       color: #3d2a53;
     }
-
     .sidebar {
       width: 250px;
       background: rgba(200, 160, 230, 0.85);
@@ -29,14 +28,12 @@
       position: fixed;
       box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     }
-
     .sidebar h2 {
       font-family: 'Spectral', serif;
       font-weight: 600;
       margin-top: 0;
       text-align: center;
     }
-
     .sidebar nav h3 {
       font-size: 16px;
       margin-top: 30px;
@@ -44,47 +41,39 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       padding-bottom: 5px;
     }
-
     .sidebar ul {
       list-style: none;
       padding-left: 0;
     }
-
     .sidebar ul li {
       margin: 10px 0;
     }
-
     .sidebar ul li a {
       text-decoration: none;
       color: #fdfaff;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
-
     .sidebar ul li a:hover {
       color: #ffdcff;
+      transform: scale(1.05);
     }
-
     .main {
       margin-left: 270px;
       padding: 40px;
     }
-
     header {
       text-align: center;
       margin-bottom: 40px;
     }
-
     header h1 {
       font-family: 'Spectral', serif;
-      font-size: 2.3em;
+      font-size: 2.5em;
       color: #4b2c6b;
     }
-
     header p {
       font-size: 1.1em;
       color: #6c498e;
     }
-
     section {
       background: rgba(255, 255, 255, 0.75);
       border-radius: 15px;
@@ -93,51 +82,28 @@
       box-shadow: 0 4px 12px rgba(150, 100, 200, 0.1);
       backdrop-filter: blur(4px);
     }
-
     section h2 {
       color: #673c99;
       font-family: 'Spectral', serif;
       margin-bottom: 15px;
     }
-
     section p {
       line-height: 1.6;
       color: #4d3968;
     }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-grid img:hover {
-      transform: scale(1.05);
-    }
-
     footer {
       text-align: center;
       padding: 25px;
       margin-top: 40px;
       color: #4d2f73;
     }
-
     footer a {
       color: #8c5ebc;
       text-decoration: none;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
-
     .copyright {
       margin-top: 10px;
       font-size: 0.9em;
@@ -145,7 +111,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="sidebar">
     <h2>🗂️ Tasks</h2>
@@ -153,8 +118,7 @@
       <h3>🗃️ Graded Exercises</h3>
       <ul>
         <li><a href="./public/homepage.html">📁 1st Graded Exercise</a></li>
-        <li><a href="#">📁 2nd Graded Exercise</a></li>
-        <li><a href="#">📁 3rd Graded Exercise</a></li>
+        <li><a href="./public/couchcriticspml.html">📁 2nd Graded Exercise</a></li>
       </ul>
       <h3>🗃️ Non-Graded Exercises</h3>
       <ul>
@@ -166,27 +130,24 @@
   </div>
 
   <div class="main">
-    <div>
-      <header>
-        <h1>2nd Quarter Portfolio</h1>
-        <p>Welcome to my Second Quarter Portfolio 🔖</p>
-      </header>
+    <header>
+      <h1>2nd Quarter Portfolio</h1>
+      <p>Welcome to my Second Quarter Portfolio 🔖</p>
+    </header>
 
-      <section>
-        <h2>🕯️ About Me</h2>
-        <p>
-          Hi! I’m Phipa, a Grade 9 student from Potassium who loves performing, reading, movies, and writing.
-          I enjoy listening to musicals, painting landscapes, and reading novels.
-          I also like rock bands like Goodkid, The Beatles, and The Cranberries.
-        </p>
-      </section>
+    <section>
+      <h2>🕯️ About Me</h2>
+      <p>
+        Hi! I’m Phipa, a Grade 9 student from Potassium who loves performing, reading, movies, and writing.
+        I enjoy listening to musicals, painting landscapes, and reading novels.
+        I also like rock bands like Goodkid, The Beatles, and The Cranberries.
+      </p>
+    </section>
 
     <footer>
       <h3>📬 Let's Connect</h3>
       <p>Email: <a href="mailto:b2029pmlibunao@pshs.edu.ph">b2029pmlibunao@pshs.edu.ph</a></p>
-      <div class="copyright">
-        &copy; 2025 Phipa Libunao ☕ All rights reserved.
-      </div>
+      <div class="copyright">© 2025 Phipa Libunao ☕ All rights reserved.</div>
     </footer>
   </div>
 </body>
