@@ -20,6 +20,7 @@ nav.navbar {
   top: 0;
   z-index: 1000;
 }
+
 nav.navbar ul {
   display: flex;
   justify-content: center;
@@ -28,6 +29,7 @@ nav.navbar ul {
   gap: 30px;
   margin: 0;
 }
+
 nav.navbar ul li a {
   text-decoration: none;
   color: #c23a24;
@@ -37,6 +39,7 @@ nav.navbar ul li a {
   border-radius: 12px;
   transition: background 0.3s, color 0.3s;
 }
+
 nav.navbar ul li a:hover {
   background: #c23a24;
   color: #fff;
@@ -50,6 +53,7 @@ header {
   border-bottom: 8px ridge #c24a28;
   box-shadow: 0 8px 40px rgba(90, 30, 10, 0.4);
 }
+
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 5em;
@@ -57,28 +61,16 @@ h1 {
   text-shadow: 3px 3px 8px rgba(255, 220, 200, 0.9);
   letter-spacing: 3px;
   margin-bottom: 0.2em;
-  position: relative;
-  overflow: hidden;
-  border-right: .15em solid #ff8e72;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 3s steps(18) forwards, glowPulse 3s ease-in-out infinite alternate 3s;
+  width: 100%;
 }
-@keyframes typing { from { width: 0; } to { width: 18ch; } }
-@keyframes glowPulse {
-  0% { text-shadow: 0 0 10px #ffbdbd, 0 0 20px #ff8e72; }
-  100% { text-shadow: 0 0 25px #ffcfb2, 0 0 40px #ff8e72; }
-}
+
 .tagline {
   color: #84391f;
   font-size: 1.6em;
   font-style: italic;
   margin-top: 10px;
   text-shadow: 1px 1px 3px rgba(255, 240, 230, 0.9);
-  opacity: 0;
-  animation: taglineFade 2s ease-out 3s forwards;
 }
-@keyframes taglineFade { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
 .container {
   max-width: 950px;
@@ -90,6 +82,7 @@ h1 {
   border: 6px double #f6a36c;
   background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
 }
+
 h2 {
   font-family: 'Cormorant Garamond', serif;
   color: #b33a1d;
@@ -99,6 +92,7 @@ h2 {
   display: inline-block;
   padding-bottom: 5px;
 }
+
 p {
   font-size: 1.25em;
   line-height: 1.8em;
@@ -111,15 +105,18 @@ p {
   padding: 0;
   font-size: 1.2em;
 }
+
 .project-links ul li {
   margin: 12px 0;
 }
+
 .project-links a {
   text-decoration: none;
   color: #c23a24;
   font-weight: bold;
   transition: color 0.3s;
 }
+
 .project-links a:hover {
   color: #ff8e72;
 }
